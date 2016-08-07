@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24627.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Limbara", "Limbara\Limbara.csproj", "{147BCA45-4CBD-4A30-AE07-E6049EE69CC0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Limbara.Exe", "Limbara.Exe\Limbara.Exe.csproj", "{D5B67DCB-E3D1-409E-A733-414CBEAA7EB3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Limbara.UI", "Limbara.UI\Limbara.UI.csproj", "{8DFE63BA-814D-4460-A77E-A0AD39F4D054}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{147BCA45-4CBD-4A30-AE07-E6049EE69CC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{147BCA45-4CBD-4A30-AE07-E6049EE69CC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{147BCA45-4CBD-4A30-AE07-E6049EE69CC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{147BCA45-4CBD-4A30-AE07-E6049EE69CC0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D5B67DCB-E3D1-409E-A733-414CBEAA7EB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5B67DCB-E3D1-409E-A733-414CBEAA7EB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5B67DCB-E3D1-409E-A733-414CBEAA7EB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5B67DCB-E3D1-409E-A733-414CBEAA7EB3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8DFE63BA-814D-4460-A77E-A0AD39F4D054}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DFE63BA-814D-4460-A77E-A0AD39F4D054}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DFE63BA-814D-4460-A77E-A0AD39F4D054}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DFE63BA-814D-4460-A77E-A0AD39F4D054}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

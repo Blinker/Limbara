@@ -1,0 +1,64 @@
+﻿<UserControl x:Class="Limbara.UI.Interface"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:Bib3.FCL.GBS="clr-namespace:Bib3.FCL.GBS;assembly=Bib3.FCL"
+             xmlns:Bib3.FCL.UI="clr-namespace:Bib3.FCL.UI;assembly=Bib3.FCL"
+             xmlns:BotEngine.UI="clr-namespace:BotEngine.UI;assembly=BotEngine.UI"
+             xmlns:BotEngine.UI.ViewModel="clr-namespace:BotEngine.UI.ViewModel;assembly=BotEngine.UI"
+             xmlns:BotEngine.UI.View="clr-namespace:BotEngine.UI.View;assembly=BotEngine.UI"
+             xmlns:local="clr-namespace:Limbara.UI"
+             mc:Ignorable="d" 
+             d:DesignHeight="555" d:DesignWidth="555">
+    <UserControl.Resources>
+        <ResourceDictionary Source="pack://application:,,,/Limbara.UI;component/resource.xaml"></ResourceDictionary>
+    </UserControl.Resources>
+
+    <Grid>
+        <TabControl>
+            <TabItem
+                Style="{StaticResource ContentControlHeaderWithStatusIcon}"
+                Visibility="Collapsed">
+                <TabItem.Header>
+                    <BotEngine.UI.ViewModel:ContentAndStatusIcon
+                        x:Name="ProcessHeader"
+                        x:FieldModifier="public"
+                        Content="connection">
+                    </BotEngine.UI.ViewModel:ContentAndStatusIcon>
+                </TabItem.Header>
+
+                <ScrollViewer>
+                    <local:InterfaceProcess
+                        x:Name="Process"
+                        x:FieldModifier="public"></local:InterfaceProcess>
+                </ScrollViewer>
+            </TabItem>
+
+            <TabItem
+                Header="config"
+                IsSelected="True">
+                <local:BrowserProcessConfig
+                    x:Name="Config"></local:BrowserProcessConfig>
+            </TabItem>
+
+            <TabItem
+                Style="{StaticResource ContentControlHeaderWithStatusIcon}">
+                <TabItem.Header>
+                    <BotEngine.UI.ViewModel:ContentAndStatusIcon
+                        x:Name="LicenseHeader"
+                        x:FieldModifier="public"
+                        Content="license">
+                    </BotEngine.UI.ViewModel:ContentAndStatusIcon>
+                </TabItem.Header>
+
+                <ScrollViewer>
+                    <BotEngine.UI.View:License
+                        x:Name="LicenseView"
+                        x:FieldModifier="public"></BotEngine.UI.View:License>
+                </ScrollViewer>
+            </TabItem>
+
+        </TabControl>
+    </Grid>
+</UserControl>

@@ -1,0 +1,69 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:system="clr-namespace:System;assembly=mscorlib"
+    xmlns:BotEngine.UI.ViewModel="clr-namespace:BotEngine.UI.ViewModel;assembly=BotEngine.UI"
+    >
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="pack://application:,,,/BotEngine.UI;component/resource.xaml"></ResourceDictionary>
+        <ResourceDictionary Source="pack://application:,,,/BotSharp.UI;component/resource.xaml"></ResourceDictionary>
+
+        <ResourceDictionary>
+
+            <Style
+                x:Key="TabItemStyleFromBotEngine"
+                TargetType="TabItem" BasedOn="{StaticResource {x:Type TabItem}}"></Style>
+
+            <Style TargetType="TabItem" BasedOn="{StaticResource TabItemStyleFromBotEngine}"></Style>
+
+            <Style
+                x:Key="indented"
+                TargetType="FrameworkElement">
+                <Setter Property="Margin" Value="16,0,0,0"></Setter>
+            </Style>
+
+            <ControlTemplate
+                x:Key="GroupWithContentIndentedTemplate"
+                TargetType="GroupBox">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="16"></RowDefinition>
+                    </Grid.RowDefinitions>
+
+                    <Label
+                            FontWeight="Bold">
+                        <Label.Resources>
+                            <Style TargetType="TextBlock" BasedOn="{StaticResource {x:Type TextBlock}}">
+                                <Setter Property="TextWrapping" Value="Wrap"></Setter>
+                            </Style>
+                        </Label.Resources>
+                        <ContentPresenter
+                              ContentSource="Header"
+                              RecognizesAccessKey="True" />
+                    </Label>
+
+                    <Grid
+                        Grid.Row="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="16"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+
+                        <ContentPresenter
+                            Grid.Column="2"></ContentPresenter>
+                    </Grid>
+
+                </Grid>
+            </ControlTemplate>
+
+            <Style
+                x:Key="GroupWithContentIndented"
+                TargetType="GroupBox"
+                BasedOn="{StaticResource {x:Type GroupBox}}">
+                <Setter Property="Template" Value="{StaticResource GroupWithContentIndentedTemplate}"></Setter>
+            </Style>
+        </ResourceDictionary>
+    </ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>

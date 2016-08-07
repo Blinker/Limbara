@@ -1,0 +1,32 @@
+﻿<UserControl x:Class="Limbara.UI.Bot"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:BotEngine.UI.ViewModel="clr-namespace:BotEngine.UI.ViewModel;assembly=BotEngine.UI"
+             xmlns:BotSharp.UI.Wpf="clr-namespace:BotSharp.UI.Wpf;assembly=BotSharp.UI"
+             xmlns:local="clr-namespace:Limbara.UI"
+             mc:Ignorable="d" 
+             d:DesignHeight="444" d:DesignWidth="444">
+    <UserControl.Resources>
+        <ResourceDictionary Source="pack://application:,,,/Limbara.UI;component/resource.xaml"></ResourceDictionary>
+    </UserControl.Resources>
+
+    <Grid>
+        <TabControl>
+            <TabItem
+                Style="{StaticResource ContentControlHeaderWithStatusIcon}">
+                <TabItem.Header>
+                    <BotEngine.UI.ViewModel:ContentAndStatusIcon
+                        x:Name="ScriptEngineHeader"
+                        x:FieldModifier="public"
+                        Content="Script Engine"></BotEngine.UI.ViewModel:ContentAndStatusIcon>
+                </TabItem.Header>
+                <BotSharp.UI.Wpf:IDE
+                    x:Name="IDE"
+                    x:FieldModifier="public"></BotSharp.UI.Wpf:IDE>
+            </TabItem>
+
+        </TabControl>
+    </Grid>
+</UserControl>
